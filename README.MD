@@ -27,7 +27,7 @@ This repository documents my hands-on deployment, configuration, and operational
 4. **Configured Access Control**: Created a custom "Tier 1 Support" role with read and manage permissions for day-to-day security operations. I assigned this role to the `sg-IT` user group to enforce least privilege.
 5. **Established Device Groups**: Created a "Regular" device group targeting Windows 11 devices. I assigned full remediation capabilities and granted access to the `sg-IT` group to ensure automated response policies are applied correctly.
 
-![Screenshot] (images/defender-device-groups-configuration.png)  
+![Screenshot](images/defender-device-groups-configuration.png)  
 *Caption: Device group configuration showing remediation level and user access assignments.*
 
 ### Phase 2: Attack Simulation and Detection Validation
@@ -36,7 +36,7 @@ This repository documents my hands-on deployment, configuration, and operational
 3. **Simulated Privilege Escalation**: Created a new local user account and added it to the local Administrators group using `net user` and `net localgroup` commands to mimic lateral movement preparation.
 4. **Simulated C2 Communication**: Executed a PowerShell script designed to generate a high volume of randomized DNS TXT queries to a mock external domain. This simulates beaconing behavior to a command-and-control server.
 
-![Screenshot] (images/defender-simulated-attack-powershell.png)
+![Screenshot](images/defender-simulated-attack-powershell.png)
 *Caption: PowerShell execution of the simulated C2 DNS beaconing script.*
 
 ### Phase 3: Incident Investigation and Response
@@ -45,7 +45,7 @@ This repository documents my hands-on deployment, configuration, and operational
 3. **Entity Analysis**: Investigated the suspicious external IP address within the Evidence and Response tab. I reviewed its observed presence in other organizations to assess threat intelligence context.
 4. **Incident Management**: Tagged the incident with "Simulation", assigned ownership to myself, and classified it as "Informational, expected activity - Security testing". This maintains accurate metrics and properly closes the loop on the investigation.
 
-![Screenshot] (images/defender-incident-graph-analysis.png)  
+![Screenshot](images/defender-incident-graph-analysis.png)  
 *Caption: Defender XDR incident graph visualizing the attack chain and entity relationships.*
 
 ## Key Findings and Outcomes
